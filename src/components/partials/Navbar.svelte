@@ -2,10 +2,10 @@
 
 </script>
 
-<header class="fixed flex justify-center items-center w-full border-b-4 h-20 border-zinc-950 top-0 z-40 bg-emerald-300 px-6">
+<header class="flex justify-center items-center w-full border-b-4 h-20 rounded-base border-zinc-950 bg-emerald-200 px-6">
   <div class="flex flex-row justify-between items-center gap-4 mx-auto w-9/12">
-    <a href="/">Remove BG</a>
-    <nav class="flex flex-row gap-5 items-center">
+    <a href="/" class="text-2xl font-caprasimo">NeoRemove</a>
+    <nav class="flex flex-row gap-5 items-center text-sm">
       <a href="/" class="inline-flex justify-center items-center py-2 px-5 border-zinc-950 neoshadow">
         Home
       </a>

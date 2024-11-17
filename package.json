@@ -30,6 +30,8 @@
 		"vitest": "^2.0.4"
 	},
 	"dependencies": {
+		"@fontsource-variable/outfit": "^5.1.0",
+		"@fontsource/caprasimo": "^5.1.0",
 		"@imgly/background-removal-node": "^1.4.5",
 		"@tailwindcss/aspect-ratio": "^0.4.2"
 	}
