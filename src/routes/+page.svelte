@@ -4,11 +4,13 @@
   import { RiDesignBrush2Line } from "svelte-icons-pack/ri";
   import Updates from "../components/Updates.svelte";
   import { fade } from "svelte/transition";
+  import Head from "../components/partials/Head.svelte";
 </script>
 
-<svelte:head>
-  <title>Home | OsekBG</title>
-</svelte:head>
+<Head
+  title="OsekBG - Effortlessly Remove Your Background Image for #Free"
+  url="https://osekbg.com"
+/>
 
 <main transition:fade={{ delay: 50, duration: 100 }}>
   <div class="flex flex-col gap-8 mt-11 w-9/12 mx-auto">

@@ -7,6 +7,7 @@
   import type { ResponseHTTP, ResponseRemoveImage } from "../../types/response";
   import { downloadBlob } from "$lib/download";
   import { v4 as uuidv4 } from "uuid";
+  import Head from "../../components/partials/Head.svelte";
 
   let imgInputElm: HTMLInputElement | any;
   let imgElm: HTMLImageElement = $state({} as HTMLImageElement);
@@ -71,9 +72,10 @@
   }
 </script>
 
-<svelte:head>
-  <title>Remove Background | OsekBG</title>
-</svelte:head>
+<Head
+  title="Remove Background | OsekBG"
+  url="https://osekbg.com/remove"
+/>
 
 <Toaster />
 
