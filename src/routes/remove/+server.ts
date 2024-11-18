@@ -5,7 +5,7 @@ import { env } from "$env/dynamic/private";
 import { HttpStatusCode } from "axios";
 import { ResponseJSONFunc } from "$lib/http/json";
 import { removeBackground } from "@imgly/background-removal-node";
-import { type ResponseRemoveImage } from "../../types/response";
+import { type ResponseRemoveImage } from "../../types/response.d";
 
 export const POST: RequestHandler = async (event: RequestEvent) => {
 	if (env.NODE_ENV === "production") {
@@ -19,8 +19,21 @@ export const POST: RequestHandler = async (event: RequestEvent) => {
 
 	const { request } = event;
 
-	const formData: FormData = await request.formData();
-	const imgFile: File = formData.get("image") as File;
+	const formData: FormData | null = await request.formData()
+    .then((res: FormData) => {
+      return res;
+    }).catch(() => {
+      return null;
+    });
+  
+  if (!formData) {
+    return ResponseJSONFunc({
+      success: false,
+      errors: "Form data cannot be empty"
+    }, HttpStatusCode.BadRequest);
+  }
+
+	const imgFile: File | null = formData.get("image") as File;
 
   if (!imgFile) {
     return ResponseJSONFunc({

@@ -14,6 +14,22 @@ body {
   @apply bg-pink-200 text-zinc-900; 
 }
 
+html::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+html.dark::-webkit-scrollbar-track {
+  @apply bg-white;
+}
+
+html::-webkit-scrollbar-track {
+  @apply bg-white
+}
+
+html::-webkit-scrollbar-thumb {
+  @apply bg-pink-300 rounded-full;
+}
+
 .neoshadow {
   @apply border-zinc-900 outline-none border-2 whitespace-nowrap rounded-base font-base ring-offset-white transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none hover:!translate-x-[4px] hover:!translate-y-[4px] hover:!shadow-none duration-75 shadow-[4px_4px_0px_rgba(24,24,27,1)] hover:shadow-[0px_0px_0px_rgba(24,24,27,1)];
 }
