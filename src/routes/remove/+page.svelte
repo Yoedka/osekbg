@@ -17,9 +17,18 @@
   let isUploadingImage: boolean = $state(false);
   let isWaitingResponse: boolean = $state(false);
   let isImageObtained: boolean = $state(false);
-
   let imgUploadingProgress: number = $state(0);
   let imgBase64: string | null = $state(null);
+
+  function resetStates(): void {
+    isImageObtained = false;
+    isRemovingBackground = false;
+    isUploadingImage = false;
+    isWaitingResponse = false;
+    isImageLoaded = false;
+    imgUploadingProgress = 0;
+    imgBase64 = null;
+  }
 
   function onLoadImage(e: Event & { currentTarget: EventTarget & HTMLInputElement }): void {
     const [ file ] = imgInputElm.files as (FileList | any );
@@ -134,10 +143,7 @@
         onclick={() => {
           if (imgInputElm.files) imgInputElm.files = null;
           imgInputElm.click();
-          isImageObtained = false;
-          isRemovingBackground = false;
-          isUploadingImage = false;
-          isWaitingResponse = false;
+          resetStates();
         }}
       >Change Image</button>
       {#if !isImageObtained}

@@ -11,6 +11,7 @@
       </span>
       <div class="flex flex-row gap-3 h-[50px]">
         <input
+          placeholder="catty@example.com"
           type="text"
           class="border-2 border-zinc-900 px-3 py-auto rounded-base focus:border-indigo-500
             focus:outline focus:outline-indigo-500 w-full h-full"
