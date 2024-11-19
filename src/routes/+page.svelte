@@ -13,12 +13,12 @@
 />
 
 <main transition:fade={{ delay: 50, duration: 100 }}>
-  <div class="flex flex-col gap-8 mt-11 w-9/12 mx-auto">
-    <div class="grid grid-cols-2 gap-5 justify-between items-center">
-      <div class="w-auto flex flex-col gap-5">
-        <h1 class="font-caprasimo text-6xl cursor-default">
+  <div class="flex flex-col gap-8 mt-10 md:mt-11 w-full md:w-9/12 mx-auto px-5">
+    <div class="flex flex-col-reverse md:grid md:grid-cols-2 gap-6 md:gap-5 justify-between items-center">
+      <div class="w-auto flex flex-col md:gap-5 gap-8">
+        <h1 class="font-caprasimo text-4xl md:text-6xl cursor-default">
           Effortlessly Remove Your Background Image for
-          <span class="bg-blue-200 px-3 py-1 cursor-default rounded-base text-4xl neoshadow-no-hover">#Free</span>
+          <span class="bg-blue-200 px-3 py-1 cursor-default rounded-base text-2xl md:text-4xl neoshadow-no-hover">#Free</span>
         </h1>
         <a href="/remove" class="py-2 px-5 text-lg bg-pink-200 neoshadow w-fit">Remove Now</a>
       </div>
@@ -26,20 +26,20 @@
         <img
           src="/img/MainHero.svg"
           alt="Main Hero"
-          class="w-[500px] h-auto"
+          class="w-[400px] md:w-[500px] h-auto"
         />
       </div>
     </div>
-    <div class="flex flex-col gap-10 mt-28">
-      <h2 class="text-3xl text-center font-caprasimo">The Easiest way to remove your background image</h2>
-      <div class="grid grid-cols-3 gap-5">
+    <div class="flex flex-col gap-10 md:mt-28 mt-10">
+      <h2 class="md:text-3xl text-2xl text-center font-caprasimo">The Easiest way to remove your background image</h2>
+      <div class="flex flex-col md:grid md:grid-cols-3 gap-5">
         <div class="flex flex-col gap-2 p-5 neoshadow text-wrap bg-sky-200 cursor-pointer">
           <Icon
             src={TrOutlineTimeDuration30}
             size="40"
           />
           <div class="flex flex-col gap-0">
-            <h3 class="text-lg font-semibold">Quick and Easy</h3>
+            <h3 class="text-lg font-bold">Quick and Easy</h3>
             <p class="text-wrap">
               Easy to use and takes just a few clicks to remove your background image.
             </p>
@@ -51,7 +51,7 @@
             size="40"
           />
           <div class="flex flex-col gap-0">
-            <h3 class="text-lg font-semibold">Free</h3>
+            <h3 class="text-lg font-bold">Free</h3>
             <p class="text-wrap">
               No ads, no tracking, and no hidden fees. It's 100% free to use.
             </p>
@@ -63,7 +63,7 @@
             size="40"
           />
           <div class="flex flex-col gap-0">
-            <h3 class="text-lg font-semibold">Eye-Catching Design</h3>
+            <h3 class="text-lg font-bold">Eye-Catching Design</h3>
             <p class="text-wrap">
               Using NeoBrutalism design style, make it stand out from the rest.
             </p>

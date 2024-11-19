@@ -91,7 +91,7 @@
 <Toaster />
 
 <main transition:fade={{ delay: 50, duration: 100 }} class="flex flex-col w-9/12 mx-auto gap-4 mt-11 min-h-[80dvh]">
-  <div class="flex gap-20 flex-row justify-around items-center">
+  <div class="flex gap-6 md:gap-20 flex-col md:flex-row justify-around items-center">
     <div class="flex flex-col gap-5 justify-center items-center">
       <div class="w-64 h-64 neoshadow overflow-hidden
         {isImageLoaded ? "flex justify-center items-center" : "hidden"}
@@ -105,7 +105,9 @@
     </div>
     {#if isRemovingBackground}
       <div class="flex justify-center items-center">
+        <span class="block md:hidden">Result:</span>
         <Icon
+          className="md:block hidden"
           src={RiArrowsArrowRightLine}
           size="80"
         />

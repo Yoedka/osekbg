@@ -2,17 +2,17 @@
 
 </script>
 
-<div class="h-fit my-20 w-9/12 mx-auto">
+<div class="h-fit my-20 w-full md:w-9/12 mx-auto md:px-0 px-5">
   <div class="flex flex-col gap-2">
     <h4 class="font-caprasimo text-3xl">Get Updates</h4>
-    <div class="grid grid-cols-[auto,60%] gap-5 justify-between">
+    <div class="flex flex-col md:grid md:grid-cols-[auto,60%] gap-5 justify-between">
       <span class="text-wrap">
         Subscribe to our mailing list to receive news and updates about <b>OsekBG</b> products and services. You can unsubscribe at any time.
       </span>
       <div class="flex flex-row gap-3 h-[50px]">
         <input
           placeholder="catty@example.com"
-          type="text"
+          type="email"
           class="border-2 border-zinc-900 px-3 py-auto rounded-base focus:border-zinc-900
             focus:outline-none focus:outline-transparent focus:ring-0 focus:ring-transparent w-full h-full neoshadow-no-hover"
         />

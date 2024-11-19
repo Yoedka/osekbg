@@ -9,8 +9,8 @@
   path="/support"
 />
 
-<main transition:fade={{ delay: 50, duration: 100 }} class="min-h-[80dvh] w-9/12 mx-auto">
-  <div class="flex flex-col gap-5">
+<main transition:fade={{ delay: 50, duration: 100 }} class="min-h-[80dvh] w-full md:w-9/12 mx-auto">
+  <div class="flex flex-col px-5 gap-5">
     <div class="flex flex-col gap-3">
       <h1 class="text-start font-caprasimo text-3xl cursor-default">Support Us ❤️</h1>
       <p>
