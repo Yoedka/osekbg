@@ -6,6 +6,25 @@ const config = {
 	preprocess: vitePreprocess(),
 	kit: {
 		adapter: adapter()
+	},
+	methodOverride: {
+		enabled: true,
+	},
+	alias: {
+		"@": "src/*"
+	},
+	csrf: {
+		checkOrigin: false
+	},
+	csp: {
+		directives: {
+			"img-src": [
+				"*", "self", "http:", "https:", "data:", "blob:"
+			],
+			"script-src": [
+				"*", "self", "http:", "https:", "unsafe-inline"
+			]
+		}
 	}
 };
 

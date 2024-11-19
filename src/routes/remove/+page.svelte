@@ -2,7 +2,7 @@
   import { fade } from "svelte/transition";
   import { Icon } from "svelte-icons-pack";
   import { RiArrowsArrowRightLine } from "svelte-icons-pack/ri";
-  import axios, { AxiosError, type AxiosProgressEvent, type AxiosResponse } from "axios";
+  import axios, { type AxiosError, type AxiosProgressEvent, type AxiosResponse } from "axios";
   import toast, { Toaster } from "svelte-french-toast";
   import type { ResponseHTTP, ResponseRemoveImage } from "../../types/response";
   import { downloadBlob } from "$lib/download";
@@ -31,7 +31,7 @@
   }
 
   function onLoadImage(): void {
-    const [ file ] = imgInputElm.files as (FileList | any );
+    const [ file ] = imgInputElm.files as (FileList);
     if (file) {
       imgElm.src = URL.createObjectURL(file);
     }
@@ -91,7 +91,7 @@
 <Toaster />
 
 <main transition:fade={{ delay: 50, duration: 100 }} class="flex flex-col w-9/12 mx-auto gap-4 mt-11 min-h-[80dvh]">
-  <div class="flex gap-6 md:gap-20 flex-col md:flex-row justify-around items-center">
+  <div class="flex gap-6 flex-col md:flex-row md:justify-evenly items-center">
     <div class="flex flex-col gap-5 justify-center items-center">
       <div class="w-64 h-64 neoshadow overflow-hidden
         {isImageLoaded ? "flex justify-center items-center" : "hidden"}

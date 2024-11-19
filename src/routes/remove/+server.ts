@@ -67,7 +67,10 @@ export const POST: RequestHandler = async (event: RequestEvent) => {
 };
 
 async function blobToBase64(blob: Blob): Promise<string> {
-	const arrayBuffer: ArrayBuffer = await blob.arrayBuffer();
+	const arrayBuffer: ArrayBuffer = await blob.arrayBuffer()
+    .then((res: ArrayBuffer) => res)
+    .catch(() => new ArrayBuffer(0));
+
 	const base64: string = Buffer.from(arrayBuffer).toString("base64");
 
 	return base64;
