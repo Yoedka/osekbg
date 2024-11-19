@@ -9,15 +9,16 @@
 
 <Head
   title="OsekBG - Effortlessly Remove Your Background Image for #Free"
-  url="https://osekbg.com"
+  path="/"
 />
 
 <main transition:fade={{ delay: 50, duration: 100 }}>
   <div class="flex flex-col gap-8 mt-11 w-9/12 mx-auto">
     <div class="grid grid-cols-2 gap-5 justify-between items-center">
       <div class="w-auto flex flex-col gap-5">
-        <h1 class="font-caprasimo text-6xl">
-          Effortlessly Remove Your Background Image for <span class="text-amber-500">#Free</span>
+        <h1 class="font-caprasimo text-6xl cursor-default">
+          Effortlessly Remove Your Background Image for
+          <span class="bg-blue-200 px-3 py-1 cursor-default rounded-base text-4xl neoshadow-no-hover">#Free</span>
         </h1>
         <a href="/remove" class="py-2 px-5 text-lg bg-pink-200 neoshadow w-fit">Remove Now</a>
       </div>

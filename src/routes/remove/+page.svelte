@@ -30,7 +30,7 @@
     imgBase64 = null;
   }
 
-  function onLoadImage(e: Event & { currentTarget: EventTarget & HTMLInputElement }): void {
+  function onLoadImage(): void {
     const [ file ] = imgInputElm.files as (FileList | any );
     if (file) {
       imgElm.src = URL.createObjectURL(file);
@@ -73,6 +73,8 @@
       console.error(err);
       const resp: ResponseHTTP = err.response?.data as ResponseHTTP;
       toast.error(resp.errors || "Failed to upload image");
+
+      resetStates();
     })
   }
 
@@ -83,12 +85,12 @@
 
 <Head
   title="Remove Background | OsekBG"
-  url="https://osekbg.com/remove"
+  path="/remove"
 />
 
 <Toaster />
 
-<main transition:fade={{ delay: 50, duration: 100 }} class="flex flex-col gap-4 mt-11 min-h-[80dvh]">
+<main transition:fade={{ delay: 50, duration: 100 }} class="flex flex-col w-9/12 mx-auto gap-4 mt-11 min-h-[80dvh]">
   <div class="flex gap-20 flex-row justify-around items-center">
     <div class="flex flex-col gap-5 justify-center items-center">
       <div class="w-64 h-64 neoshadow overflow-hidden

@@ -13,10 +13,13 @@
         <input
           placeholder="catty@example.com"
           type="text"
-          class="border-2 border-zinc-900 px-3 py-auto rounded-base focus:border-indigo-500
-            focus:outline focus:outline-indigo-500 w-full h-full"
+          class="border-2 border-zinc-900 px-3 py-auto rounded-base focus:border-zinc-900
+            focus:outline-none focus:outline-transparent focus:ring-0 focus:ring-transparent w-full h-full neoshadow-no-hover"
         />
-        <button class="bg-indigo-200 font-medium hover:bg-indigo-300 rounded-base border-2 border-zinc-900 py-auto px-5 text-sm w-fit h-full">Subscribe</button>
+        <button class="bg-indigo-200 font-medium rounded-base
+          border-2 border-zinc-900 py-auto px-5 text-sm w-fit h-full neoshadow">
+          Subscribe
+        </button>
       </div>
     </div>
   </div>
