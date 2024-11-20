@@ -93,7 +93,7 @@
 <main transition:fade={{ delay: 50, duration: 100 }} class="flex flex-col w-9/12 mx-auto gap-4 mt-11 min-h-[80dvh]">
   <div class="flex gap-6 flex-col md:flex-row md:justify-evenly items-center">
     <div class="flex flex-col gap-5 justify-center items-center">
-      <div class="w-64 h-64 neoshadow overflow-hidden
+      <div class="w-64 h-auto neoshadow overflow-hidden
         {isImageLoaded ? "flex justify-center items-center" : "hidden"}
       ">
         <img
@@ -113,12 +113,12 @@
         />
       </div>
       <div class="flex flex-col gap-5 justify-center items-start h-full">
-        <div class="w-64 h-64 neoshadow overflow-hidden flex justify-center items-center">
+        <div class="w-64 h-auto neoshadow overflow-hidden flex justify-center items-center">
           {#if isUploadingImage}
-            <p>Uploading Image {imgUploadingProgress}%</p>
+            <p class="py-10">Uploading Image {imgUploadingProgress}%</p>
           {/if}
           {#if isWaitingResponse}
-            <p>Removing Background...</p>
+            <p class="py-10">Removing Background...</p>
           {/if}
           {#if isImageObtained}
             <img
