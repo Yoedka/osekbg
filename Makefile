@@ -5,8 +5,8 @@ upload:
 		--exclude=".github" \
 		--exclude=".git" \
 		--exclude="build" \
-		-e "ssh -p 8722 -i ~/.ssh/osekbg" \
-		./ user@0.0.0.0:/home/user/osekbg
+		-e "ssh -p <PORT> -i ~/.ssh/<SSH_PRIVATE_KEY>" \
+		./ <USER>@<IP_ADDRESS>:<PATH_TO_DIR>
 
 upload-deploy:
 	rsync -avz \
@@ -15,14 +15,14 @@ upload-deploy:
 		--exclude=".github" \
 		--exclude=".git" \
 		--exclude="build" \
-		-e "ssh -p 8722 -i ~/.ssh/osekbg" \
-		./ user@0.0.0.0:/home/user/osekbg
+		-e "ssh -p <PORT> -i ~/.ssh/<SSH_PRIVATE_KEY>" \
+		./ <USER>@<IP_ADDRESS>:<PATH_TO_DIR>
 		
-	ssh -p 8722 -i ~/.ssh/osekbg \
-		user@0.0.0.0 \
-		"cd /home/user/osekbg; /home/user/.npm-packages/bin/pnpm i; /home/user/.npm-packages/bin/pnpm build; /home/user/.npm-packages/bin/pm2 restart server.js --update-env"
+	ssh -p <PORT> -i ~/.ssh/<SSH_PRIVATE_KEY>" \
+		<USER>@<IP_ADDRESS> \
+		"cd <PATH_TO_DIR>; /home/<USER>/.npm-packages/bin/pnpm i; /home/<USER>/.npm-packages/bin/pnpm build; /home/<USER>/.npm-packages/bin/pm2 restart server.js --update-env"
 
 deploy:
-	ssh -p 8722 -i ~/.ssh/osekbg \
-		user@0.0.0.0 \
-		"cd /home/user/osekbg; /home/user/.npm-packages/bin/pnpm i; /home/user/.npm-packages/bin/pnpm build; /home/user/.npm-packages/bin/pm2 restart server.js --update-env"
+	ssh -p <PORT> -i ~/.ssh/<SSH_PRIVATE_KEY>" \
+		<USER>@<IP_ADDRESS> \
+		"cd <PATH_TO_DIR>; /home/<USER>/.npm-packages/bin/pnpm i; /home/<USER>/.npm-packages/bin/pnpm build; /home/<USER>/.npm-packages/bin/pm2 restart server.js --update-env"
