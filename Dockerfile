@@ -1,6 +1,5 @@
-FROM node:18 AS base
+FROM node:18-slim
 
-FROM base AS builder
 WORKDIR /app
 COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
 RUN \
