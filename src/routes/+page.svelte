@@ -13,16 +13,21 @@
 />
 
 <main transition:fade={{ delay: 50, duration: 100 }}>
-  <div class="flex flex-col gap-8 mt-10 md:mt-11 w-full md:w-9/12 mx-auto px-5">
-    <div class="flex flex-col-reverse md:grid md:grid-cols-2 gap-6 md:gap-5 justify-between items-center">
-      <div class="w-auto flex flex-col md:gap-5 gap-8">
+  <div class="flex flex-col gap-8 mt-10 md:mt-11 w-full md:w-9/12 mx-auto md:px-0 px-5">
+    <div class="z-20 relative flex flex-col-reverse md:grid md:grid-cols-2 gap-6 md:gap-5 justify-between items-center">
+      <div class="z-10 max-w-[1600px] w-full md:w-[400px] rounded-full h-[200px] -translate-x-1/2
+        md:-translate-x-0 md:h-[400px] bg-gradient-to-b from-transparent
+        from-0% via-95% to-100% via-yellow-300 md:top-[-100px] top-[-20px]
+        to-transparent absolute left-1/2 md:left-7 blur-[100px]"
+      ></div>
+      <div class="relative z-20 w-auto flex flex-col md:gap-5 gap-8">
         <h1 class="font-caprasimo text-4xl md:text-6xl cursor-default">
           Effortlessly Remove Your Background Image for
           <span class="bg-blue-200 px-3 py-1 cursor-default rounded-base text-2xl md:text-4xl neoshadow-no-hover">#Free</span>
         </h1>
         <a href="/remove" class="py-2 px-5 text-lg bg-pink-200 neoshadow w-fit">Remove Now</a>
       </div>
-      <div class="flex justify-center items-center">
+      <div class="relative z-20 flex justify-center items-center">
         <img
           src="/img/MainHero.svg"
           alt="Main Hero"

@@ -1,8 +1,8 @@
 export const info: Record<string, any> ={
   site_name: "OsekBG",
-  site_url: "https://osekbg.com",
+  site_url: "https://osekbg.hichuru.online",
   site_description: "Effortlessly Remove Your Background Image for #Free",
-  site_cover_image: "https://osekbg.com/img/Cover.png",
+  site_cover_image: "https://osekbg.hichuru.online/img/Cover.png",
   site_author: "Ahmad Habibi",
   site_author_url: "https://habi14.pages.dev",
   github_repo: "https://github.com/ahmadhabibi14/osekbg",
