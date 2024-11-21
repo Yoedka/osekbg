@@ -12,7 +12,7 @@ export const POST: RequestHandler = async (event: RequestEvent) => {
 		if (await limiter.isLimited(event)) {
       return ResponseJSONFunc({
         success: false,
-        errors: "Too many requests, please try again later"
+        errors: "You'v reached the daily limit of background removal requests. Please try again tomorrow."
       }, HttpStatusCode.TooManyRequests);
 		}
 	}

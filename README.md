@@ -1,6 +1,6 @@
 # OsekBG - Remove Background image
 
-Word `Osek` is adapted from [Sasak Language](https://id.wikipedia.org/wiki/Bahasa_Sasak) that means `remove`. And I call it `OsekBG` that stands for `Osek Background` or `Remove Background`
+Word `Osek` is adapted from [Sasak Language](https://id.wikipedia.org/wiki/Bahasa_Sasak) that means `remove`. And I call it `OsekBG` which stands for `Osek Background` or `Remove Background`
 
 ## Deployment
 
@@ -26,7 +26,11 @@ pnpm install
 ```bash
 pnpm build
 ```
-If build success, build artifact available at `./build`
+If build success, build artifact available at `./build`. Now set environment to production
+
+```bash
+export NODE_ENV=production
+```
 
 ### Setup pm2
 
