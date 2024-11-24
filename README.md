@@ -32,6 +32,12 @@ If build success, build artifact available at `./build`. Now set environment to 
 export NODE_ENV=production
 ```
 
+Build with Docker Compose:
+```bash
+docker-compose up -d
+```
+
+
 ### Setup pm2
 
 Install pm2 globally
@@ -39,7 +45,7 @@ Install pm2 globally
 npm install -g pm2
 ```
 
-Start the app as daemond service
+Start the app as daemon service
 ```bash
 pm2 start server.js --name "OsekBG"
 ```
